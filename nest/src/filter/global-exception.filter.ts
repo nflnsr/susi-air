@@ -6,8 +6,8 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { QueryFailedError } from 'typeorm';
-import { BusinessException } from '~/filter/exception/business.exception.js';
-import { IErrorResponse, ResponseStatus } from '~/utils/constant.js';
+import { BusinessException } from './exception/business.exception.js';
+import { IErrorResponse, ResponseStatus } from '../utils/constant.js';
 
 @Catch()
 export class GlobalExceptionFilter<T> implements ExceptionFilter {

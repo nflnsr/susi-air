@@ -6,10 +6,10 @@ import {
 } from '@nestjs/common';
 import { Observable, map } from 'rxjs';
 import { Reflector } from '@nestjs/core';
-import { PASS_TRANSFORM_KEY } from '~/decorator/pass-transform.decorator.js';
-import { RESPONSE_MESSAGE_KEY } from '~/decorator/response-message.decorator.js';
-import { ResponseStatus } from '~/utils/constant.js';
-import { ApiResponse } from '~/utils/constant.js';
+import { PASS_TRANSFORM_KEY } from '../decorator/pass-transform.decorator.js';
+import { RESPONSE_MESSAGE_KEY } from '../decorator/response-message.decorator.js';
+import { ResponseStatus } from '../utils/constant.js';
+import { ApiResponse } from '../utils/constant.js';
 
 @Injectable()
 export class TransformInterceptor<T = unknown> implements NestInterceptor {

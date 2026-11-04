@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import { BusinessErrorCode, ResponseStatus } from '~/utils/constant.js';
+import { BusinessErrorCode, ResponseStatus } from '../../utils/constant.js';
 
 export class BusinessException extends HttpException {
   private businessErrorCode: number;

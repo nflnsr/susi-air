@@ -1,7 +1,7 @@
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { LoginDto } from './dto/login.dto.js';
 import { AuthService } from './auth.service.js';
-import { ResponseMessage } from '~/decorator/response-message.decorator.js';
+import { ResponseMessage } from '../../decorator/response-message.decorator.js';
 
 @Controller('auth')
 export class AuthController {
