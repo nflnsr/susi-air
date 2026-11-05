@@ -8,6 +8,7 @@ export const useAuthStore = defineStore("auth", () => {
   const errorMessage = ref("");
   const isSubmitting = ref(false);
   const isLoggingOut = ref(false);
+  const user = ref<Record<string, unknown> | null>(null);
   const { request } = useApi();
   const config = useRuntimeConfig();
 
@@ -37,6 +38,7 @@ export const useAuthStore = defineStore("auth", () => {
       password.value = "";
       remember.value = false;
       errorMessage.value = "";
+      user.value = null;
       await navigateTo("/signin");
     } finally {
       isLoggingOut.value = false;
@@ -51,6 +53,7 @@ export const useAuthStore = defineStore("auth", () => {
     errorMessage,
     isSubmitting,
     isLoggingOut,
+    user,
     signIn,
     logout,
   };
